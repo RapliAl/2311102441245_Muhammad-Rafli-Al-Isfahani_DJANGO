@@ -1,12 +1,54 @@
 # ⚙️ DJANGO 
 
-## 💡Penjelasan
- Django merupakan framework untuk membuat aplikasi web dengan menggunakan **Bahasa Pemrograman Python**, yang membantu kita membuat web jauh lebih cepat dan lebih efisien.
+## 💡Apa Saja Di Website Ini?
+1. Halaman HOME - Yang akan menampilkan Halaman Depan dari website
+2. Halaman ABOUT - Yang akan menampilkan Deskripsi dan Pengenalan Diri
+3. Halaman CONTACT - Akan menampilkan halaman untuk menghubungi saya
+
+ 
 
 ## 🪄 Cara Menjalankan
-1. install virtual environmentnya dengan cara memasukkan command *python -m venv .venv*
-2. selanjutnya, aktifkan venv dengan command *cd .venv/Scripts* lalu *ativate*
-3. lalu, install django dengan memasukan command *pip install django*
-4. kemudian, membuat directory project kita dengan command *django-admin startproject nama-project*
-5. lalu pindah ke directory project dengan *cd nama-project*
-6. terakhir jalankan server dengan *python manage.py runserver*
+1.Buka Command Prompt (CMD) 
+
+2.Masuk ke Folder Tempat Proyek Akan Dibuat
+```bash
+cd nama_folder
+```
+
+3.Buat Virtual Environment
+```bash
+py -m venv .venv
+```
+
+4.Aktifkan Virtual Environment
+```shell
+.venv\Scripts\activate
+```
+
+5.Install Django
+```bash
+pip install django
+```
+
+6.Buat Directory Project
+```bash
+django-admin startproject your_project
+```
+
+7.Masuk ke Direktori Project Django yang telah dibuat
+```bash
+cd your_project
+```
+
+8.Kemudian. Jalankan Server Django
+```bash
+py manage.py runserver
+```
+
+9.Jika berhasil, Anda akan melihat pesan bahwa server sedang berjalan.
+
+Buka browser Anda, lalu akses:
+```bash
+http://127.0.0.1:8000
+```
+Dan Project Django pertama sudah berhasil dibuat.
