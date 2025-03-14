@@ -1,11 +1,8 @@
 # ⚙️ DJANGO 
 
-## 💡Apa Saja Di Website Ini?
-1. Halaman HOME - Yang akan menampilkan Halaman Depan dari website
-2. Halaman ABOUT - Yang akan menampilkan Deskripsi dan Pengenalan Diri
-3. Halaman CONTACT - Akan menampilkan halaman untuk menghubungi saya
+## 💡 Deskripsi
+Untuk project app yang saya buat adalah sama seperti di video yang terlampir, yaitu membuat app yang berisikan berita dan artikel yang masih bisa dikembangkan lagi kedepannya
 
- 
 
 ## 🪄 Cara Menjalankan
 1.Buka Command Prompt (CMD) 
@@ -30,25 +27,17 @@ py -m venv .venv
 pip install django
 ```
 
-6.Buat Directory Project
+6.Lalu untuk membuat Migrationnya
 ```bash
-django-admin startproject your_project
+python manage.py makemigrations
 ```
 
-7.Masuk ke Direktori Project Django yang telah dibuat
+7.Selanjutnya kita tinggal migrate dengan command
 ```bash
-cd your_project
+python manage.py migrate
 ```
 
-8.Kemudian. Jalankan Server Django
+8.Terakhir tinggal menjalankan projectnya
 ```bash
-py manage.py runserver
+python manage.py runserver
 ```
-
-9.Jika berhasil, Anda akan melihat pesan bahwa server sedang berjalan.
-
-Buka browser Anda, lalu akses:
-```bash
-http://127.0.0.1:8000
-```
-Dan Project Django pertama sudah berhasil dibuat.
