@@ -1,10 +1,8 @@
 # ⚙️ DJANGO 
 
 ## 💡Apa Saja Di Website Ini?
-1. Halaman HOME - Yang akan menampilkan Halaman Depan dari website
-2. Halaman ABOUT - Yang akan menampilkan Deskripsi dan Pengenalan Diri
-3. Halaman CONTACT - Akan menampilkan halaman untuk menghubungi saya
-
+1. HOME - Yang akan menampilkan Halaman Utama dari website
+2. Dashboard - Menampilkan Laporan grafis, Manajemen Informasi, dan Data - data
  
 
 ## 🪄 Cara Menjalankan
