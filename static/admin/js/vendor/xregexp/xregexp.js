@@ -1714,7 +1714,7 @@ XRegExp.replace = function (str, search, replacement, scope) {
  *
  * @memberOf XRegExp
  * @param {String} str String to search.
- * @param {Array} replacements Array of replacement detail arrays.
+ * @param {Array} replacements Array of replacement detail.html arrays.
  * @returns {String} New string with all replacements.
  * @example
  *

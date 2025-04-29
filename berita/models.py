@@ -3,24 +3,20 @@ from django.contrib.auth.models import User
 
 # Create your models here.
 
-class Kategori(models.Model):
-    nama = models.CharField(max_length=100)
-
-    def __str__(self):
-        return self.nama
-
-    class Meta:
-        verbose_name_plural = "1. Kategori"
-
-class Artikel(models.Model):
-    judul = models.CharField(max_length=255)
-    isi = models.TextField(blank=True, null=True)
-    kategori = models.ForeignKey(Kategori, on_delete=models.SET_NULL, blank=True, null=True)
+class Blog(models.Model):
+    objects = None
+    title = models.CharField(max_length=300)
+    description = models.TextField()
     author = models.ForeignKey(User, on_delete=models.PROTECT)
-    thumbnail = models.ImageField(upload_to='artikel',blank=True, null=True)
+    image = models.ImageField(upload_to='images/')
 
-    def __str__(self):
-        return self.judul
 
-    class Meta:
-        verbose_name_plural = "2. Artikel"
+# class Artikel(models.Model):
+#     object = None
+#     title = models.CharField(max_length=255)
+#     description = models.TextField(blank=True, null=True)
+#     author = models.ForeignKey(User, on_delete=models.PROTECT)
+#     image = models.ImageField(upload_to='artikel',blank=True, null=True)
+#
+#     class Meta:
+#         verbose_name_plural = "1. Artikel"

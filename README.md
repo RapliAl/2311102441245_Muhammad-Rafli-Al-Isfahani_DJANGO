@@ -4,6 +4,7 @@
 ## 💡Apa Saja Di Website Ini?
 1. HOME - Yang akan menampilkan Halaman Utama dari website
 2. Dashboard - Menampilkan Laporan grafis, Manajemen Informasi, dan Data - data
+3. Blog - Menampilkan Blog Yang Saya Buat
  
 ## 🪄 Cara Menjalankan
 1.Buka Command Prompt (CMD) 
