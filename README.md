@@ -1,4 +1,4 @@
-# ⚙️ DJANGO 
+# ⚙️ DJANGO ⭐
 
 
 ## 💡Apa Saja Di Website Ini?
