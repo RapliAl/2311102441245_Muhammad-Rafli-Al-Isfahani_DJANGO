@@ -1,8 +1,11 @@
 from django.urls import path
-from berita.views import dashboard, blog_detail, blog
+
+from berita.views import blog_detail, Blog
 
 urlpatterns = [
-    path('', dashboard, name='dashboard'),
-    path('', blog, name='blog'),
-    path('detail', blog_detail, name='blog_detail'),
+    # path('dashboard/', dashboard, name='dashboard'),
+    path('', Blog, name='Blog'),
+
+    path('detail/<slug:slug>/', blog_detail, name='blog_detail'),
+
 ]
