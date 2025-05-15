@@ -1,14 +1,19 @@
-from django.shortcuts import render, get_object_or_404
+from django.contrib import messages
+from django.contrib.auth import authenticate, login
+from django.contrib.auth.decorators import login_required
+from django.shortcuts import render, get_object_or_404, redirect
 
 from .models import Blog
 
 
-# def dashboard(request):
-#     template_name = "dashboard/base.html"
-#     context = {
-#         'title': 'halaman dashboard'
-#     }
-#     return render(request, template_name, context)
+@login_required
+def dashboard(request):
+    template_name = "dashboard/index.html"
+    context = {
+        'title': 'halaman dashboard'
+    }
+    return render(request, template_name, context)
+
 
 def blog(request):
     blog_data = Blog.objects.all()
@@ -27,3 +32,17 @@ def blog_detail(request, slug):
         'blogs': blog_data,
     }
     return render(request, templates_name, context)
+
+
+def blog_login(request):
+    if request.method == 'POST':
+        username = request.POST.get('username')
+        password = request.POST.get('password')
+        user = authenticate(request, username=username, password=password)
+        if user is not None:
+            print("Login Successful. User:", user)
+            login(request, user)
+            return redirect('dashboard')
+        else:
+            messages.error(request, 'Username OR password is incorrect')
+    return render(request, 'halaman/login.html')
