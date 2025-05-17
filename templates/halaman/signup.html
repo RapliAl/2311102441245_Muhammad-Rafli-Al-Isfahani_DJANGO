@@ -5,12 +5,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Signin | Responsive Bootstrap Landing Page Template</title>
+    <title>Signup | Responsive Bootstrap Landing Page Template</title>
     <meta name="description" content=""/>
     <meta name="keywords" content=""/>
     <meta name="author" content="Themesdesign"/>
 
-    <link rel="shortcut icon" href={% static 'halaman/Heyauth_v1.0/HTML/images/favicon.icon' %}>
+    <link rel="shortcut icon" href="images/favicon.ico">
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="{% static 'halaman/Heyauth_v1.0/HTML/css/bootstrap.min.css' %}" type="text/css">
@@ -71,13 +71,11 @@
                                     </div>
                                 </div>
                             </div>
-                            <!-- end -->
                         </div>
                     </div>
                 </div>
             </div>
             <!-- end col -->
-
             <div class="col-lg-6">
                 <div class="auth-box">
                     <div class="mb-4 mb-md-5 text-center">
@@ -85,51 +83,53 @@
                             <img src="{% static 'halaman/Heyauth_v1.0/HTML/images/logo-dark.png' %}" height="24" alt="">
                         </a>
                     </div>
-
                     <div class="auth-content">
                         <div class="mb-3 pb-3 text-center">
-                            <h4 class="fw-normal">Welcome to <span class="fw-bold">Heyauth</span></h4>
-                            <p class="text-muted mb-0">Sign in to continue to Heyauth.</p>
+                            <h4 class="fw-normal">Register Account to <span class="fw-bold">Heyauth</span></h4>
+                            <p class="text-muted">Get your free Heyauth account now</p>
                         </div>
-                        <form method="POST">
+                        <form method='POST'>
                             {% csrf_token %}
                             <div class="form-floating form-floating-custom mb-3">
+                                <input type="text" class="form-control" id="input-email" name="email"
+                                       placeholder="Enter Email">
+                                <label for="input-email">Email</label>
+                            </div>
+                            <div class="form-floating form-floating-custom mb-3">
                                 <input type="text" class="form-control" id="input-username"
-                                       name="username" placeholder="Enter Username">
+                                       name='username' placeholder="Enter Email">
                                 <label for="input-username">Username</label>
                             </div>
-
-                            <div class="form-floating form-floating-custom form-password auth-pass-inputgroup mb-3">
+                            <div class="form-floating form-floating-custom mb-3 form-password auth-pass-inputgroup">
                                 <input type="password" class="form-control" id="password-input"
-                                       name="password" placeholder="Enter Password">
+                                       name='password' placeholder="Enter Password">
                                 <button type="button" class="btn btn-link position-absolute h-100 end-0 top-0"
                                         id="password-addon">
                                     <i class="mdi mdi-eye-outline font-size-18 text-muted"></i>
                                 </button>
                                 <label for="input-password">Password</label>
                             </div>
-
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
                                 <label class="form-check-label text-muted f-15" for="flexCheckDefault">
-                                    Remember me
+                                    I agree to all the term and condition.
                                 </label>
                             </div>
                             <div class="mt-3">
-                                <button class="btn btn-dark shadow-none w-100" type="submit"
-                                        href="{% url 'dashboard' %}">Log In
+                                <button class="btn btn-dark shadow-none w-100" type="submit" href="{% url 'login' %}">
+                                    Register
                                 </button>
                             </div>
                             <hr>
                             <div class="mt-3 text-center">
-                                <p class="mb-0 text-muted">Don't have an account ?<a href="{% url 'signup' %}"
-                                                                                     class="text-success fw-bold text-decoraton-underline ms-1">
-                                    Sign up
+                                <p class="mb-0 text-muted">Already have an account ?<a href="{% url 'login' %}"
+                                                                                       class="text-success fw-bold text-decoraton-underline ms-1">
+                                    Sign in
                                 </a></p>
                             </div>
                         </form>
                         <!-- end form -->
-                        <div class="row justify-content-center align-items-center mt-4 mt-md-5 ">
+                        <div class="row justify-content-center align-items-center mt-4 mt-md-5">
                             <div class="col-4">
                                 <div class="client-images my-3 my-md-0">
                                     <img src="{% static 'halaman/Heyauth_v1.0/HTML/images/img-1.png' %}"
@@ -147,14 +147,15 @@
                             </div>
                             <!-- end col -->
                             <div class="col-4">
-                                <div class="client-images my-3 my-md-0" href="https://www.instagram.com/rflii_al/">
+                                <div class="client-images my-3 my-md-0">
                                     <img src="{% static 'halaman/Heyauth_v1.0/HTML/images/img-3.png' %}"
                                          class="mx-auto d-block img-fluid"
                                          alt="logo-img">
                                 </div>
                             </div>
                             <!-- end col -->
-                        </div><!-- end row -->
+                        </div>
+                        <!-- end row -->
                     </div><!-- auth content -->
                 </div>
                 <!-- end authbox -->
@@ -166,7 +167,6 @@
     <!-- end container -->
 </div>
 <!-- END -->
-
 <!-- bootstrap -->
 <script src="{% static 'halaman/Heyauth_v1.0/HTML/js/bootstrap.bundle.min.js' %}"></script>
 <!-- CUSTOM JS -->

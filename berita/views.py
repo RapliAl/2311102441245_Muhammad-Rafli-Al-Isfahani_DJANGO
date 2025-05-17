@@ -1,6 +1,7 @@
 from django.contrib import messages
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth.models import User
 from django.shortcuts import render, get_object_or_404, redirect
 
 from .models import Blog
@@ -46,3 +47,16 @@ def blog_login(request):
         else:
             messages.error(request, 'Username OR password is incorrect')
     return render(request, 'halaman/login.html')
+
+
+def blog_signup(request):
+    if request.method == 'POST':
+        email = request.POST.get('email')
+        username = request.POST.get('username')
+        password = request.POST.get('password')
+        user = User.objects.create_user(username=username, password=password)
+        if user is not None:
+            return redirect('login')
+        else:
+            messages.error(request, 'Input Username Or Password')
+    return render(request, 'halaman/signup.html')
